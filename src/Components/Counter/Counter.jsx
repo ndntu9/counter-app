@@ -48,6 +48,13 @@ function Counter() {
         setMaximumValue(e.target.value);
     }
 
+    function handleResetClicked(e) {
+        e.stopPropagation();
+
+        setCount(0);
+        setShow({ ...show, reset: false });
+    }
+
     return (
         <div className={clsx(styles.main)}>
             <div className={clsx(styles.topbar)}>
@@ -146,7 +153,12 @@ function Counter() {
                 />
             )}
 
-            {show.reset && <Reset onShowChange={handleShowChange} />}
+            {show.reset && (
+                <Reset
+                    onShowChange={handleShowChange}
+                    onResetClicked={handleResetClicked}
+                />
+            )}
         </div>
     );
 }

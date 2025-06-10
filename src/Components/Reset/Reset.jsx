@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import styles from "./Reset.module.css";
 
-function Reset({ onShowChange }) {
+function Reset({ onShowChange, onResetClicked }) {
     return (
         <section
             className={clsx(styles.reset)}
@@ -20,7 +20,12 @@ function Reset({ onShowChange }) {
                 </button>
 
                 <h1 className={clsx(styles["reset__title"])}>Reset counter?</h1>
-                <button className={clsx(styles["reset__btn"])}>Yes</button>
+                <button
+                    className={clsx(styles["reset__btn"])}
+                    onClick={onResetClicked}
+                >
+                    Yes
+                </button>
                 <button className={clsx(styles["reset__btn"])}>Cancel</button>
             </div>
         </section>
