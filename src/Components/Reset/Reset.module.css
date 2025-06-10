@@ -1,0 +1,46 @@
+.reset {
+    position: fixed;
+    inset: 0 0 0 0;
+    background: #000000;
+
+    .reset__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .reset__btn-close-icon {
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        color: #ffffff;
+        scale: 2;
+        transition: 0.3s;
+    }
+
+    .reset__btn-close-icon:hover {
+        scale: 3;
+    }
+
+    .reset__title {
+        margin-bottom: 20px;
+        font-size: 3rem;
+        font-weight: 400;
+    }
+
+    .reset__btn {
+        margin-bottom: 20px;
+        width: 150px;
+        padding: 16px 0;
+        color: #ffffff;
+        font-size: 2rem;
+        transition: 0.3s;
+    }
+
+    .reset__btn:hover {
+        scale: 1.3;
+    }
+}

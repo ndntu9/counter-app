@@ -1,0 +1,82 @@
+.info {
+    position: fixed;
+    inset: 0 0 0 0;
+    background: #000000;
+
+    .info__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .info__btn-close-icon {
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        color: #ffffff;
+        scale: 2;
+        transition: 0.3s;
+    }
+
+    .info__btn-close-icon:hover {
+        scale: 3;
+    }
+
+    .info__title {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .info__content {
+        font-size: 2rem;
+    }
+
+    .info__url {
+        color: #ffffff;
+        text-decoration-style: dotted;
+        transition: 0.3s;
+    }
+
+    .info__url:hover {
+        opacity: 0.5;
+    }
+
+    .info__btn-donate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 12px;
+        background: #fb6263;
+        color: #ffffff;
+        font-weight: 700;
+        transition: 0.3s;
+    }
+
+    .info__btn-donate:hover {
+        scale: 1.3;
+    }
+
+    .info__btn-donate-icon {
+        animation-name: scalePulse;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes scalePulse {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.5;
+    }
+    0% {
+        scale: 1;
+    }
+}
